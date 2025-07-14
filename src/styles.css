@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: "norsebold";
   src: url("/fonts/norse-bold-webfont.woff2") format("woff2"),
@@ -6,10 +12,77 @@
   font-style: normal;
 }
 
+:root {
+  --light-accent-color: #fff;
+  --dark-accent-color: #c7476c;
+}
+
 h1 {
   font-family: "norsebold", sans-serif;
 }
 
 body {
   font-family: "Lucida Sans", Verdana, sans-serif;
+}
+
+.login-page-container {
+  display: flex;
+  width: 1200px;
+}
+
+.login-page-background-img {
+  background-image: url(/images/sign-up-form-bg-compressed.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.logo-background {
+  margin-top: 200px;
+  padding: 18px 0;
+}
+
+.background-tint {
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: multiply;
+}
+
+.logo-icon-and-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1.odin-text {
+  color: var(--light-accent-color);
+  font-size: 78px;
+  font-weight: 400;
+}
+
+#photo-credits {
+  text-align: center;
+  margin-bottom: 36px;
+  padding: 18px 0;
+  color: var(--light-accent-color);
+}
+
+#photo-credits a {
+  color: var(--light-accent-color);
+}
+
+#photo-credits a:hover {
+  text-decoration-color: var(--dark-accent-color);
+}
+
+.main-login-section {
+  width: 60%;
+}
+
+#odin-logo {
+  width: 80px;
+  height: auto;
 }
