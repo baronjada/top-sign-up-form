@@ -13,8 +13,10 @@
 }
 
 :root {
-  --light-accent-color: #fff;
-  --dark-accent-color: #c7476c;
+  --white: #fff;
+  --accent-color: #c7476c;
+  --light-grey: #f1f1f1e5;
+  --dark-grey: #3b3b3b;
 }
 
 h1 {
@@ -27,7 +29,6 @@ body {
 
 .login-page-container {
   display: flex;
-  width: 1200px;
 }
 
 .login-page-background-img {
@@ -36,14 +37,16 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 30%;
   height: 100vh;
   justify-content: space-between;
 }
 
 .logo-background {
-  margin-top: 200px;
   padding: 18px 0;
+  height: 146px;
+  display: flex;
+  justify-content: center;
 }
 
 .background-tint {
@@ -58,8 +61,8 @@ body {
 }
 
 h1.odin-text {
-  color: var(--light-accent-color);
-  font-size: 78px;
+  color: var(--white);
+  font-size: 5rem;
   font-weight: 400;
 }
 
@@ -67,22 +70,121 @@ h1.odin-text {
   text-align: center;
   margin-bottom: 36px;
   padding: 18px 0;
-  color: var(--light-accent-color);
+  color: var(--white);
 }
 
 #photo-credits a {
-  color: var(--light-accent-color);
+  color: var(--white);
 }
 
 #photo-credits a:hover {
-  text-decoration-color: var(--dark-accent-color);
+  text-decoration-color: var(--accent-color);
 }
 
 .main-login-section {
-  width: 60%;
+  width: 70%;
+  background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.login-page-background-img,
+.main-login-section {
+  padding: 140px 0 0 0;
+}
+
+.login-intro-text {
+  font-size: 1.4rem;
+  font-weight: bold;
+  padding: 0 0 38px 44px;
+  width: 840px;
+}
+
+.login-form-fields,
+.form-submit-and-login-link {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+}
+
+.login-form-fields {
+  background-color: var(--white);
+  padding: 18px 96px 0 44px;
+}
+
+.form-submit-and-login-link {
+  padding: 38px 96px 18px 44px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+}
+
+.form-col input[type="text"],
+.form-col input[type="tel"],
+.form-col input[type="email"],
+.form-col input[type="password"] {
+  width: 300px;
+  margin: 8px 0 28px;
+  padding: 8px;
+  border: 1px solid rgb(167, 167, 167, 0.3);
+  border-radius: 3px;
+}
+
+.form-col input[type="text"]:focus,
+.form-col input[type="tel"]:focus,
+.form-col input[type="email"]:focus,
+.form-col input[type="password"]:focus {
+  border-color: blue;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.form-col input[type="text"]:required,
+.form-col input[type="tel"]:required,
+.form-col input[type="email"]:required,
+.form-col input[type="password"]:required {
+  border: 2px solid rgb(195, 48, 48);
+}
+
+.form-col input[type="text"]:valid,
+.form-col input[type="tel"]:valid,
+.form-col input[type="email"]:valid,
+.form-col input[type="password"]:valid {
+  border: 2px solid rgb(124, 210, 91);
+}
+
+.form-col label {
+  text-transform: uppercase;
+  color: var(--dark-grey);
+  font-weight: 600;
+}
+
+button[type="submit"] {
+  padding: 14px 56px;
+  border: none;
+  border-radius: 6px;
+  background-color: var(--accent-color);
+  color: var(--white);
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: var(--dark-grey);
 }
 
 #odin-logo {
   width: 80px;
   height: auto;
+}
+
+#log-in-link {
+  color: var(--accent-color);
+}
+
+#log-in-link:hover {
+  text-decoration-color: var(--dark-grey);
 }
